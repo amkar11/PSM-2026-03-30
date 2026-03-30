@@ -1,19 +1,21 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
             
+
+
 // Firestore
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js'
-import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js'
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js';
+import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js';
           
 // Your web app's Firebase configuration
 const firebaseConfig = {
-apiKey: "AIzaSyDeik9aER9YvsxLMbEgaFd8efhn2i8KqTw",
-authDomain: "psm-2026-03-30.firebaseapp.com",
-projectId: "psm-2026-03-30",
-storageBucket: "psm-2026-03-30.firebasestorage.app",
-messagingSenderId: "632175564728",
-appId: "1:632175564728:web:7f23c3046fe9a6146f614d"
+  apiKey: "AIzaSyDeik9aER9YvsxLMbEgaFd8efhn2i8KqTw",
+  authDomain: "psm-2026-03-30.firebaseapp.com",
+  projectId: "psm-2026-03-30",
+  storageBucket: "psm-2026-03-30.firebasestorage.app",
+  messagingSenderId: "632175564728",
+  appId: "1:632175564728:web:7f23c3046fe9a6146f614d"
 };
           
 // Initialize Firebase

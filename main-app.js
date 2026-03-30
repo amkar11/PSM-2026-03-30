@@ -4,7 +4,7 @@
 import { db } from './script.js';
 
 // Import Firestore functions
-import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.X.X/firebase-firestore.js'; // Ensure version matches your firebase-init.js
+import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js'; // Ensure version matches your firebase-init.js
 
 async function fetchAndDisplayProducts() {
   try {
