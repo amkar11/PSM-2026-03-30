@@ -1,49 +1,87 @@
 *, *::before, *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 h1 {
-	display: block;
-	text-align: center;
-	margin-top: 2vh;
-	margin-bottom: 5vh;
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .grid-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product {
-	border: 1px solid black;
-	border-radius: 10px;
-	shadow-box: 0 0 4px 12px black;
-	padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .general-info {
-	display: flex;
-	flex-direction: column;
-	gap: 1vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .product img {
-	width: 200px;
-	height: 200px;
-	display: block;
-	margin: 0 auto;
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.cost {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #12a92c;
+    margin-top: 0.5rem;
 }
 
 .product button {
-	outline: none;
-	border: none;
-	padding: 5px;
-	display:  block;
-	margin: 0 auto;
-	width: 70%;
-	background-color: blue;
-	border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #0066cc;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.product button:hover {
+    background-color: #0052a3;
 }
