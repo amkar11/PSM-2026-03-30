@@ -6,32 +6,42 @@ import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.X.X/fi
 
 const productsData = [
   {
-    name: "Fender Stratocaster",
-    type: "Electric Guitar",
+    brand: "Fender",
+    model: "Stratocaster",
+    instrument_type: "Electric Guitar",
+    image_link: "https://r2.gear4music.com/media/86/864777/600/preview.jpg",
     quantity: 5,
     cost: 4500.00
   },
   {
-    name: "Yamaha PSR-E373",
-    type: "Keyboard",
+    brand: "Yamaha",
+    model: "PSR-E373",
+    instrument_type: "Keyboard",
+    image_link: "https://m.media-amazon.com/images/I/61SfBFcsdEL._AC_UF1000,1000_QL80_.jpg",
     quantity: 12,
     cost: 1200.00
   },
   {
-    name: "Meinl HCS Cymbal Set",
-    type: "Drum Cymbals",
+    brand: "Meinl",
+    model: "HCS",
+    instrument_type: "Drum Cymbals",
+    image_link: "https://r2.gear4music.com/media/53/537921/600/preview.jpg",
     quantity: 3,
     cost: 850.00
   },
   {
-    name: "D'Addario EJ16",
-    type: "Acoustic Guitar Strings",
+    brand: "D'Addario",
+    model: "EJ16",
+    instrument_type: "Acoustic Guitar Strings",
+    image_link: "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_10/104609/11949651_800.jpg",
     quantity: 50,
     cost: 35.00
   },
   {
-    name: "Clarinet YCL-255",
-    type: "Woodwind",
+    brand: "Yamaha",
+    model: "Clarinet YCL-255",
+    instrument_type: "Woodwind",
+    image_link: "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_27/279396/14715751_800.jpg",
     quantity: 2,
     cost: 3200.00
   }
