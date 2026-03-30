@@ -1,5 +1,5 @@
 // Import the 'db' instance from your Firebase initialization file
-import { db } from './firebase-init.js';
+import { db } from './script.js';
 
 // Import Firestore functions
 import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.X.X/firebase-firestore.js'; // Make sure version matches your firebase-init.js
@@ -50,12 +50,9 @@ const productsData = [
 async function seedProducts() {
   try {
     for (const product of productsData) {
-      // Get a reference to the 'products' collection
       const productsCollectionRef = collection(db, "products");
-
-      // Add a new document with a generated ID
       const docRef = await addDoc(productsCollectionRef, product);
-      console.log("Document written with ID: ", docRef.id, " for product:", product.name);
+      console.log("Document written with ID: ", docRef.id, " for product:", product.brand, product.model);
     }
     console.log("All products seeded successfully!");
   } catch (e) {
