@@ -1,43 +1,26 @@
-<html>
-    <head>
-
-    </head>
-    <body>
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-            
-            // Firestore
-            import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js'
-            import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js'
-          
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-              apiKey: "AIzaSyC_Ckr6ukuKfnYBcSutBACb8nTxRLq2B30",
-              authDomain: "mobile1-b8d84.firebaseapp.com",
-              projectId: "mobile1-b8d84",
-              storageBucket: "mobile1-b8d84.appspot.com",
-              messagingSenderId: "904226315912",
-              appId: "1:904226315912:web:7a419ed8447221fa50c93d"
-            };
-          
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-
-            // Initialize Cloud Firestore and get a reference to the service
-            const db = getFirestore(app);
-
-            // Read data
-            const querySnapshot = await getDocs(collection(db, "cars"));
-
-            querySnapshot.forEach((doc) => {
-                console.log(doc.data());
-                console.log(doc.data()['brand'],doc.data()['model']);
-                document.writeln(doc.data()['brand'],' ',doc.data()['model'],'<br>');
-            });
-
-        </script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PSM-2026-03-30</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<h1>Instruments</h1>
+	<div class="grid-container">
+		<div class="product">
+			<img src="https://virtualpiano.net/wp-content/uploads/2020/08/Virtual-Violin-Virtual-Piano.png" alt="Product image">
+			<div class="general-info">
+				<p class="instrument-type">Violin</p>
+				<p class="brand">Yamaha</p>
+				<p class="model">Yamaha 67</p>
+				<p class="cost">6700</p>
+				<p class="quantity">12</p>
+			</div>
+			<button>Add to cart</button>
+		</div>
+	</div>
+	<script src="./script.js" type="module"></script>
+</body>
 </html>
