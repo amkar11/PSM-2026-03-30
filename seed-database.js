@@ -2,7 +2,7 @@
 import { db } from './script.js';
 
 // Import Firestore functions
-import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.X.X/firebase-firestore.js'; // Make sure version matches your firebase-init.js
+import { collection, addDoc, getDocs } from 'https://www.gstatic.com/firebasejs/10.X.X/firebase-firestore.js'; // Make sure version matches your firebase-init.js
 
 const productsData = [
   {
@@ -51,6 +51,9 @@ async function seedProducts() {
   try {
     for (const product of productsData) {
       const productsCollectionRef = collection(db, "products");
+      
+      const querySnapshot = await getDocs(collection(db, "products"));
+
       const docRef = await addDoc(productsCollectionRef, product);
       console.log("Document written with ID: ", docRef.id, " for product:", product.brand, product.model);
     }
