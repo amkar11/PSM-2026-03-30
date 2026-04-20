@@ -49,16 +49,13 @@ const productsData = [
 
 async function seedProducts() {
 
-  const collection = collection(db, "products")
-  const snapshot = await getCountFromServer(collection)
+  const productsCollectionRef = collection(db, "products")
+  const snapshot = await getCountFromServer(productsCollectionRef)
   if (snapshot.data().count == 6) return;
+  const querySnapshot = await getDocs(collection(db, "products"));
 
   try {
     for (const product of productsData) {
-      const productsCollectionRef = collection(db, "products");
-      
-      const querySnapshot = await getDocs(collection(db, "products"));
-
       const docRef = await addDoc(productsCollectionRef, product);
       console.log("Document written with ID: ", docRef.id, " for product:", product.brand, product.model);
     }
@@ -68,5 +65,4 @@ async function seedProducts() {
   }
 }
 
-// Call the function to start seeding the database
 seedProducts();
